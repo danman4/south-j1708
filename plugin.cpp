@@ -29,7 +29,7 @@ using namespace std;
      "plugin" : {
          "description" : "Simple J1708 plugin",
          "type" : "string",
-         "default" : "j1708",
+         "default" : "J1708",
          "readonly" : "true"
      },
      "asset" : {
@@ -148,7 +148,7 @@ Reading plugin_poll(PLUGIN_HANDLE *handle)
  */
 void plugin_reconfigure(PLUGIN_HANDLE *handle, string& newConfig)
 {
-    ConfigCategory config("j1708", newConfig);
+    ConfigCategory config("J1708", newConfig);
     J1708           *j1708 = (J1708 *)handle;
 
         j1708->configure(&config);
